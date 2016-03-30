@@ -11,9 +11,16 @@ public class Demo implements Runnable {
     @Override
     public void run() {
         // TODO: Add code here to run all three experiements
-        
-        Experimenter experimenter = new Experimenter();
+        try {
+        Experimenter experimenter = new RandomExperimenter();
         experimenter.runTest();
+        Experimenter experimenter2 = new TrueExperimenter();
+        experimenter2.runTest();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
     
     /**
